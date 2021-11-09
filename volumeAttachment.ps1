@@ -1,5 +1,5 @@
 $d = Get-Disk | Where-Object partitionstyle -eq 'RAW'
-$label = 'G'
+$driveLetter = 'G'
 $d |
     Initialize-Disk -PartitionStyle GPT -PassThru |
     New-Partition -UseMaximumSize -DriveLetter $driveLetter |
